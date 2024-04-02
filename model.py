@@ -75,7 +75,7 @@ class YOLOv1(nn.Module):
         return nn.Sequential(*layers)
 
     @staticmethod
-    def _create_fcs(self, split_size, num_boxes, num_classes):
+    def _create_fcs(split_size, num_boxes, num_classes):
         S, B, C = split_size, num_boxes, num_classes
         return nn.Sequential(
             nn.Flatten(),
